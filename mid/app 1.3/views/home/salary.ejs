@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SALARY</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+
+</head>
+<body>
+	
+	<a href="/home">Back</a>| 
+	<a href="/logout">Logout</a>
+	
+	
+	<h3>SALARY</h3>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>SALARY</th>		
+			<th>TYPE</th>
+			<th>Action</th>
+		</tr>
+
+		<% for(var i=0; i < userList.length; i++){ %>
+		<tr>
+			<td><%= userList[i].id %></td>
+			<td><%= userList[i].name %></td>
+			<td><%= userList[i].salary %></td>
+			<td><%= userList[i].teacher_name %></td>
+			<td><a href="/home/salary/edit/<%= userList[i].id %>">EDIT</a> | <a href="/home/salary/delete/<%= userList[i].id %>"> DELETE </a></td>
+		</tr>
+		<% } %>
+	</table>
+	<br/>
+	<a href="/home/salary/insert">Insert</a>
+</body>
+</html>

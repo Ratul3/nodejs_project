@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SALARY DELETE</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+
+</head>
+<body>
+	
+	<a href="/home">Back</a>| 
+	<a href="/logout">Logout</a>
+	
+	
+	<h3>DELETE SALARY</h3>
+
+	<form method="post">
+		<table border="1">
+			<tr>
+				<td>Name</td>
+				<td><%= user.name %></td>
+			</tr>
+			<tr>
+				<td>Salary</td>
+				<td><%= user.salary %></td>
+			</tr>
+			<tr>
+				<td>Type</td>
+				<td><%= user.teacher_name %></td>
+			</tr>
+		</table>
+		<h3>Are you sure? This can't be undone!</h3>
+		<input type="hidden" name="id" value="<%= user.id %>">
+		<input type="submit" name="submit" value="confirm">
+	</form>
+	
+</body>
+</html>
